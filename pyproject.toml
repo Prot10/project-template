@@ -29,7 +29,6 @@ namespaces = true
 
 [dependency-groups]
 dev = [
-  "dvc[ssh]",
   "mypy",
   "pre-commit",
   "pytest",

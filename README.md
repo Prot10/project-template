@@ -15,7 +15,3 @@ This repository contains a template for a Python project. It is intended to be u
 - [ ] Change **project name** (line 6) in `pyproject.toml`
 - [ ] Change **project description** (line 7) in `pyproject.toml`
 - [ ] Change **tool.hatch.version path** (line 28) in `pyproject.toml`
-
-</br>
-
-- [ ] Change **DVC url** in `.dvc/config` to `ssh://lxplus.cern.ch/eos/project/d/diagbox/dvc/<project>` (and create the folder if it does not exist)

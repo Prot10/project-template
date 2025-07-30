@@ -70,18 +70,18 @@ git config user.email ""
 1. Create a merge request on GitLab for the changes to be reviewed and merged. For merge requests to be merged they need to:
    - be approved by at least one other developer.
    - pass the CI pipeline (static analyzers, tests and docs)
-   - have no merge conflicts with the `master` branch.
+   - have no merge conflicts with the `main` branch.
 
 # Fast-Forward Merge Policy
 
-This repository follows a fast-forward merge policy for merging branches. If the `master` branch has been modified since you created your feature branch, you will need to update your feature branch with the latest changes from `master` before merging.
+This repository follows a fast-forward merge policy for merging branches. If the `main` branch has been modified since you created your feature branch, you will need to update your feature branch with the latest changes from `main` before merging.
 
 1. Commit or stash any pending changes in your feature branch.
-1. Switch to the `master` branch:
+1. Switch to the `main` branch:
    ```shell
-   git checkout master
+   git checkout main
    ```
-1. Pull the latest changes from the master branch:
+1. Pull the latest changes from the main branch:
    ```shell
     git pull
    ```
@@ -89,9 +89,9 @@ This repository follows a fast-forward merge policy for merging branches. If the
    ```shell
    git checkout <branch_name>
    ```
-1. Merge the changes from the master branch into your feature branch:
+1. Merge the changes from the main branch into your feature branch:
    ```shell
-   git merge master
+   git merge main
    ```
 1. Resolve any conflicts that may arise during the merge process.
 
@@ -181,7 +181,7 @@ The tests stage runs the automated tests for the project. The code coverage meas
 
 The documentation stage checks for errors during the documentation generation process.
 
-Please note that it is not possible to merge to the master branch without a successful CI pipeline.
+Please note that it is not possible to merge to the main branch without a successful CI pipeline.
 
 # Versioning
 
@@ -192,10 +192,10 @@ When a new version is released, the following steps should be taken:
 1. Members of the team should agree on the new version number according to https://semver.org/spec/v2.0.0.html.
 1. Update the version number in the [CHANGELOG.md](CHANGELOG.md) file.
 1. Describe the changes in the [CHANGELOG.md](CHANGELOG.md) file. Tip: check Merge Requests titles for hints on what to include.
-1. Update the version number in the \`src/<name>/__init__.py\`\` file.
+1. Update the version number in the \`src/<name>/**init**.py\`\` file.
 1. Commit the changes.
 1. Create a new Merge Request entitled "Release version \<version_number>".
-1. Once the Merge Request is approved and merged, create a new tag using the GitLab UI. The tag should be named "\<version_number>". Always tag the master branch.
+1. Once the Merge Request is approved and merged, create a new tag using the GitLab UI. The tag should be named "\<version_number>". Always tag the main branch.
 
 ## Adding or removing dependencies
 
