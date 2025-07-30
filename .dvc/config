@@ -1,0 +1,5 @@
+[core]
+    remote = eos-cern
+['remote "eos-cern"']
+    url = ssh://lxplus.cern.ch/eos/project/d/diagbox/dvc/template
+    ask_password = true
